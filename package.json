@@ -1,0 +1,38 @@
+{
+  "name": "bsky-follower-tracker",
+  "version": "0.1.0",
+  "description": "Track follows and unfollows for the given account in bluesky",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/cli/index.js",
+    "cli": "tsx src/cli/index.ts",
+    "dev": "npm run dev:cli",
+    "dev:cli": "vite build --watch -c vite/cli.config.ts",
+    "build": "npm run build:cli",
+    "build:cli": "vite build -c vite/cli.config.ts",
+    "test": "vitest run",
+    "dev:test": "vitest",
+    "format": "prettier --write '**/*.{ts,tsx,json,js,jsx,css,scss,sass,html,md,yml}'",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "prepare": "husky"
+  },
+  "author": "@danikaze.bsky.social",
+  "license": "ISC",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-unicorn": "^56.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.1",
+    "vitest": "^2.1.6"
+  }
+}
