@@ -7,6 +7,7 @@
 | Name                   | Required | Values            | Description                                                                                          |
 | ---------------------- | -------- | ----------------- | ---------------------------------------------------------------------------------------------------- |
 | `PRINT_ENV_VARS`       |          | `true` \| `false` | When enabled, the provided environment variables will be printed in the console. Defaults to `false` |
+| `DATA_FOLDER`          |          | `string`          | Folder to store the output data. Defaults to `data`                                                  |
 | `BLUESKY_ACCOUNT_NAME` | ✔       |                   | Name of the account to track as `danikaze.bsky.social`                                               |
 | `BLUESKY_PASSWORD`     | ✔       |                   | Password of the bluesky account encoded in base64 format                                             |
 

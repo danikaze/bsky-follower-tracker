@@ -4,6 +4,7 @@ import { join } from 'path';
 import { AccountListDiff, AccountListSnapshot, ModelData, ModelState } from '.';
 import { JsonDb } from '../utils/json-db';
 import { DeepReadonly, UtcDate } from '../types';
+import { envVars } from '../utils/env-vars';
 
 export class Model {
   private readonly db: JsonDb<ModelData>;
@@ -20,7 +21,10 @@ export class Model {
       knownAccounts: [],
     };
 
-    const filepath = join('data', `${handleName.replace(/:@/g, '_')}.json`);
+    const filepath = join(
+      envVars.DATA_FOLDER || 'data',
+      `${handleName.replace(/:@/g, '_')}.json`
+    );
     this.db = new JsonDb<ModelData>(filepath, { initialData });
   }
 

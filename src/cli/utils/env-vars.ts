@@ -1,5 +1,8 @@
 export type AppEnvVars = {
+  /** When `true` it will print the available environment vars */
   PRINT_ENV_VARS: boolean;
+  /** Folder to store the output data */
+  DATA_FOLDER: string;
   /** full bsky name as `danikaze.bsky.social` */
   BLUESKY_ACCOUNT_NAME: string;
   /** Encoded pasword */
@@ -28,6 +31,11 @@ const ENV_VARS: EnvVarDef[] = [
       const lc = raw.toLowerCase();
       return lc === '1' || lc === 't' || lc === 'true' || lc == 'on';
     },
+  },
+  {
+    name: 'DATA_FOLDER',
+    optional: true,
+    default: 'data',
   },
   { name: 'BLUESKY_ACCOUNT_NAME' },
   {
