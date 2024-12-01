@@ -2,9 +2,14 @@
  * @type {import('eslint').Linter.LegacyConfig}
  */
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:react/jsx-runtime'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/jsx-runtime',
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: ['./tsconfig.node.json', './tsconfig.web.json'],
+    project: ['./tsconfig.json', './tsconfig.cli.json'],
   },
   plugins: ['@typescript-eslint', 'unicorn'],
   settings: {
