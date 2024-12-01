@@ -2,6 +2,7 @@ node_modules
 media
 coverage
 dist
+data
 out
 .DS_Store
 *.log*

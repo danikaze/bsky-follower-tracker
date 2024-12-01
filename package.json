@@ -23,6 +23,7 @@
     "node": ">=20"
   },
   "devDependencies": {
+    "@atproto/api": "^0.13.18",
     "@types/node": "^22.10.1",
     "@typescript-eslint/eslint-plugin": "^8.16.0",
     "@typescript-eslint/parser": "^8.16.0",
